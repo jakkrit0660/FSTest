@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>myfirstvue</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+  <body style="text-align:center;">
+    <h1 style=" color: brown;" > Hello World </h1>
+    Type Something: <input tpye = "text" id="text" ><br>
+    <button onclick = "showtext()">Click</button>
+    <p>Text from the Textbox will show down here</p>
+    <p id = "line1"></p>
+    <script>
+      function showtext(){
+        var Stext = document.getElementById("text").value;
+        document.getElementById("line1").innerHTML = Stext;
+      }
+    </script>
   </body>
 </html>
