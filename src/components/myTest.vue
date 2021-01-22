@@ -1,19 +1,25 @@
 <template>
-  <body>
-    <h1>Hello World</h1>
-    Type Something: <input type="text" id="text" /><br />
-    <button @click="showtext()">Click</button><br />
-    <p>The text will show down here</p>
-    <p id="line1"></p>
-  </body>
+  <div>
+    <h1>{{ title }}</h1>
+    <input
+      v-model="msg"
+      type="text"
+      id="text"
+      placeholder="Type Something"
+    /><br />
+    <p>{{ text }}</p>
+    <p>{{ msg }}</p>
+  </div>
 </template>
 <script>
 export default {
-  methods: {
-    showtext() {
-      var Stext = document.getElementById("text").value;
-      document.getElementById("line1").innerHTML = Stext;
-    },
-  },
-};
+  name: 'myText',
+  data () {
+    return {
+      title: 'Hello World',
+      text: 'The Text will show down here',
+      msg: ''
+    }
+  }
+}
 </script>
